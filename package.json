@@ -1,0 +1,22 @@
+{
+  "name": "rayzhou26.github.io",
+  "version": "1.0.0",
+  "description": "Ray Zhou Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayzhou26/rayzhou26.github.io.git"
+  },
+  "author": "Ben Huang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rayzhou26/rayzhou26.github.io/issues"
+  },
+  "homepage": "https://github.com/rayzhou26/rayzhou26.github.io#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
