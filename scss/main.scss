@@ -1,6 +1,104 @@
+@import "menu";
 $primary-color: #fff;
+$secondary-color: #ff0000;
+$portrait-image: url(../img/background.jpg);
+$background-opacity: 0, 9;
 
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+@mixin background {
+  &#bg-img {
+    background-attachment: fixed;
+    background-size: cover;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      z-index: -1;
+      //background: rgba($primary-color, $background-opacity);
+    }
+  }
+}
+* {
+  //asterisk selects everything
+  box-sizing: border-box;
+}
 body {
+  @include background;
   background: $primary-color;
   color: #444;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+//Headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    //.lg-heading would select the class using & selects h1.lg-heading
+    font-size: 6rem; //rem is multiplier of html font size(16pixels)
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.5); //lightens up background
+  }
+}
+
+a {
+  color: #444;
+  text-decoration: none;
+}
+
+header {
+  position: fixed; //keeps header at top corner
+  z-index: 2;
+  width: 100%;
+}
+
+//this is useless because I didnt make "Zhou" in h1 secondary"
+.text-secondary {
+  color: $secondary-color;
+}
+
+main {
+  padding: 4rem;
+  height: 100%;
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+}
+
+footer {
+  padding: 4rem;
+  bottom: 20px;
+  text-align: center;
+  .icons {
+    //this only affects icons inside main
+    margin-top: 1rem;
+
+    a {
+      padding: 0.4rem;
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut(); //includes the mixin from above
+      }
+    }
+  }
 }
