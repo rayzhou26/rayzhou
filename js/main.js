@@ -8,7 +8,7 @@ const navItems = document.querySelectorAll(".nav-item");
 //Set Initial State of Menu(Closed)
 let showMenu = false;
 
-menuBtn.addEvenlistener("click", openMenu);
+menuBtn.addEventListener("click", openMenu);
 
 function openMenu() {
   if (!showMenu) {

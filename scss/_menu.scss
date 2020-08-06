@@ -1,9 +1,5 @@
 // Menu Button
 
-@mixin easeOut {
-  transition: all 0.5s ease-out;
-}
-
 .menu-btn {
   position: absolute;
   z-index: 3;

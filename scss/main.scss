@@ -5,25 +5,6 @@ $secondary-color: #ff0000;
 $portrait-image: url(../img/background.jpg);
 $background-opacity: 0, 9;
 
-@mixin easeOut {
-  transition: all 0.5s ease-out;
-}
-@mixin background {
-  &#bg-img {
-    background-attachment: fixed;
-    background-size: cover;
-
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      z-index: -1;
-      //background: rgba($primary-color, $background-opacity);
-    }
-  }
-}
 * {
   //asterisk selects everything
   box-sizing: border-box;
