@@ -1,13 +1,21 @@
 //Media Screens for different size screens
 
 @include mediaXl {
+  main {
+    max-width: 700px;
+  }
 }
 
 @include mediaLg {
+  main {
+    max-width: 700px;
+  }
 }
 
 @include mediaMd {
   main {
+    width: 100%;
+
     align-items: center;
     text-align: center;
     .lg-heading {
@@ -39,7 +47,10 @@
       height: 150px;
     }
   }
-
+  .blocks {
+    grid-template-columns: repeat(2, 1fr);
+    //grid-template-columns: 1fr;
+  }
   .about-info {
     grid-template-areas:
       "bioimage"
@@ -47,7 +58,6 @@
       "exp1"
       "exp2"
       "exp3";
-
     grid-template-columns: 1fr;
   }
 }
@@ -60,5 +70,7 @@
     margin-left: 5vh;
     margin-right: 5vh;
   }
-  grid-template-columns: repeat(2, 1fr);
+  .blocks {
+    grid-template-columns: 1fr;
+  }
 }
