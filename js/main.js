@@ -1,16 +1,17 @@
 //Select DOM items
 const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
-const menuNav = document.querySelector(".menu-Nav");
+const menuNav = document.querySelector(".menu-nav");
 const menuBranding = document.querySelector(".menu-branding");
 const navItems = document.querySelectorAll(".nav-item");
 
 //Set Initial State of Menu(Closed)
 let showMenu = false;
-
 menuBtn.addEventListener("click", openMenu);
 
 function openMenu() {
+  //console.log("open menu");
+
   if (!showMenu) {
     menuBtn.classList.add("close");
     menu.classList.add("show");

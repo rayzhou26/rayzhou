@@ -28,6 +28,7 @@
       //line 2 - hide
       &:nth-child(2) {
         opacity: 0;
+        animation-delay: 5s;
       }
       //line 3 - rotate
       &:nth-child(3) {
