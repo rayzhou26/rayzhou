@@ -21,6 +21,14 @@ $secondary-color: #ff0000;
   }
 }
 
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #444444;
+  } @else {
+    @return rgb(219, 219, 219);
+  }
+}
+
 //Media Query Mixins
 @mixin mediaSm {
   @media screen and (max-width: 500px) {

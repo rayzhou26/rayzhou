@@ -26,15 +26,15 @@
   }
   .menu-nav {
     height: 70vh;
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, 100%, 0);
     font-size: 24px;
   }
   .menu-branding {
     height: 30vh;
-    transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, -100%, 0);
 
     .portrait {
-      background: url("../images/portrait_smallest");
+      background: url("../images/portrait_smallest.jpg");
       width: 150px;
       height: 150px;
     }
