@@ -66,6 +66,7 @@ a {
 
 main {
   text-align: center;
+  justify-content: center;
   padding-top: 2rem;
   padding-bottom: 0;
   padding-left: 10%;
@@ -75,14 +76,28 @@ main {
   &#home {
     overflow: hidden;
   }
+  #arrow {
+    width: 3vh;
+    height: auto;
+  }
 }
-
+.arrowheading {
+  text-align: left;
+  padding-left: 55px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+#about {
+  justify-content: center;
+}
 //CSS FOR ABOUT ME PAGE
 .about-info {
   display: grid;
-  text-align: center;
-  grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio";
+  justify-items: center;
+  //grid-gap: 00px;
+  //grid-area: "bioimage bio";
+  grid-template-areas: "bioimage bio";
+  //grid-template-columns: 440px 440px;
   //"exp1 exp2 exp3";
   //grid-template-columns: repeat(3, 1fr);
 }
@@ -90,6 +105,8 @@ main {
 .bio-image {
   grid-area: bioimage;
   margin: 20px;
+  object-fit: cover;
+
   //border-radius: 50%;
   //border: $secondary-color 3px solid;
 }
