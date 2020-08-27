@@ -1,5 +1,5 @@
 @import "config";
-@import "menu";
+//@import "menu";
 
 $portrait-image: url(../img/background.jpg);
 $background-opacity: 0, 9;
@@ -14,59 +14,65 @@ body {
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Open Sans";
+  //font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
-
 //Headings
-h1,
-h2,
-h3 {
-  margin: 0;
-  font-weight: 400;
-  align-items: center;
+h1 {
+  letter-spacing: 0.2em;
   text-align: center;
-  &.lg-heading {
-    //.lg-heading would select the class using & selects h1.lg-heading
-    font-size: 4rem; //rem is multiplier of html font size(16pixels)
-  }
-
-  &.sm-heading {
-    font-size: 1rem;
-    margin-bottom: 5rem;
-    padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5); //lightens up background
+  font-size: 35px;
+  font-family: sans-serif;
+  margin-bottom: 0;
+  a {
+    color: #0f0f0f;
   }
 }
-
+h2 {
+  padding-bottom: 4rem;
+  letter-spacing: 0.2em;
+  font-weight: 100;
+  font-size: 20px;
+  margin-top: 4px;
+  a {
+    color: #0f0f0f;
+  }
+}
+h3 {
+  letter-spacing: 0.2em;
+  font-size: 20px;
+  font-weight: lighter;
+}
 a {
-  color: #444;
   text-decoration: none;
-}
-
-header {
-  position: fixed; //keeps header at top corner
-  z-index: 2;
-  width: 100%;
+  //   letter-spacing: normal;
+  //   font-size: 3rem;
+  //   font: normal normal bold 24px/1.4em "open sans", sans-serif;
+  //   font-weight: 8000;
+  // }
+  //for Menu
+  // header {
+  //   position: fixed; //keeps header at top corner
+  //   z-index: 2;
+  //   width: 100%;
 }
 
 // make "Zhou" in h1 secondary"
 .text-secondary {
-  color: $secondary-color;
+  //color: $secondary-color;
 }
 
 main {
   text-align: center;
-  padding: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 0;
   padding-left: 10%;
   padding-right: 10%;
   //height: 100%;
   min-height: calc(100vh-64px);
   &#home {
     overflow: hidden;
-    h1 {
-      margin-top: 1vh;
-    }
   }
 }
 
@@ -74,48 +80,33 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas:
-    "bioimage bio bio"
-    "exp1 exp2 exp3";
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "bioimage bio bio";
+  //"exp1 exp2 exp3";
+  //grid-template-columns: repeat(3, 1fr);
 }
 
 .bio-image {
   grid-area: bioimage;
   margin: auto;
-  border-radius: 50%;
-  border: $secondary-color 3px solid;
+  //border-radius: 50%;
+  //border: $secondary-color 3px solid;
 }
 
 .bio {
+  margin: auto;
   grid-area: bio;
   font-size: 1.5rem;
   max-width: 700px;
-}
-.exp-1 {
-  grid-area: exp1;
-}
-.exp-2 {
-  grid-area: exp2;
-}
-.exp-2 {
-  grid-area: exp3;
-}
-
-.exp {
-  background: lighten($primary-color, 5);
-  padding: 0.5rem;
-  border-bottom: $secondary-color 3px solid;
-  font-size: 1.25rem;
-  h6 {
-    font-size: 1.25rem;
+  text-align: left;
+  p {
+    line-height: 1.5em;
+    font-size: 16px;
+    font: sans-serif;
+    font-weight: lighter;
+    color: #616161;
+    width: 60vh;
+    line-height: 1.5em;
   }
-  h3 {
-    font-size: 1.75rem;
-    float: left;
-  }
-  min-width: 200px;
-  max-width: 500px;
 }
 
 //blocks in grid in home page
