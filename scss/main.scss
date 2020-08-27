@@ -23,7 +23,8 @@ h1 {
   letter-spacing: 0.2em;
   text-align: center;
   font-size: 35px;
-  font-family: sans-serif;
+  font-weight: 900;
+
   margin-bottom: 0;
   a {
     color: #0f0f0f;
@@ -79,6 +80,7 @@ main {
 //CSS FOR ABOUT ME PAGE
 .about-info {
   display: grid;
+  text-align: center;
   grid-gap: 30px;
   grid-template-areas: "bioimage bio bio";
   //"exp1 exp2 exp3";
@@ -87,13 +89,13 @@ main {
 
 .bio-image {
   grid-area: bioimage;
-  margin: auto;
+  margin: 20px;
   //border-radius: 50%;
   //border: $secondary-color 3px solid;
 }
 
 .bio {
-  margin: auto;
+  margin: 10px;
   grid-area: bio;
   font-size: 1.5rem;
   max-width: 700px;
@@ -123,7 +125,7 @@ main {
 
     &:hover {
       opacity: 0.75;
-      transform: scale(1.1);
+      transform: scale(1.15);
       z-index: 4;
       @include easeOut;
     }
